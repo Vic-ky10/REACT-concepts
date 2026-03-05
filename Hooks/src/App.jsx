@@ -1,4 +1,3 @@
-import React from 'react'
 
 import UseFetch from './useEffects/UseFetch'
 import Counter from './Counter'
@@ -10,7 +9,10 @@ import StopWatch from './Tasks/StopWatch'
 import DarkModeToggle from './Tasks/Themes'
 import UseCallback from './UseCallback/UseCallback'
 import ThemeToggle from './Tasks/Themes'
-import UseMemo from './Tasks/UseMemo/UseMemo'
+import UseMemo from './UseMemo/UseMemo'
+import Component from './UseContext/Component'
+ 
+
 function App() {
   return (
     //<UseState />
@@ -22,7 +24,11 @@ function App() {
     //  < ThemeToggle />
           // <UseCallback />
   //<UseMemo />
-  <UseCallback />
+ // <UseCallback />
+
+   <Component /> 
+
+
 )
 }
 

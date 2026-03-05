@@ -1,35 +1,29 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { List } from "./List";
 
-const UseCallback = () => {
-  const [number, setNumber] = useState(0);
-  const [dark, setDark] = useState(false);
-
-  const getItems = () => {
-    return [number + 1, number + 2, number + 3];
-  };
-
-  const theme = {
-    backgroundColor: dark ? "black" : "white",
-    color: dark ? "white" : "black",
-  };
-
+export const UseCallback = () => {
+  const [prod, setProd] = useState(["product 1", "product 2"]);
+  const [count , setCount] = useState(0)
+  const [cart, setCart] = useState(0)
+         
+  const addToCart = useCallback(() => {
+   
+    setCart((s)=> s+1)
+    console.log(cart)
+  },[cart])
   return (
-    <div style={theme}>
-      <input
-        type="number"
-        value={number}
-        onChange={(e) => setNumber(parseInt(e.target.value))}
-    />
-
-    <button onClick={() => setDark((curr) => !curr)}>Toggle theme 
-    </button>
-
-    <List getItem={getItems}></List>
-    </div>
-    
+    <> 
+     
+        <h3>count: {count} </h3>
+        <h3>Cart : {cart}</h3>
+        <button onClick={() => setCount((c)=> c+1)}> + count </button>
+      <div className="prod-wrapper">
+        {prod.map((p ,i ) => {
+          return <List name = {p}  addToCart={addToCart} key={i} />;
+        })}
+      </div>
+    </>
   );
 };
 
-export default UseCallback;
-                           
+export default UseCallback

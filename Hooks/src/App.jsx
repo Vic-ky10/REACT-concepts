@@ -21,8 +21,9 @@ function App() {
    //  <StopWatch />
     //  < ThemeToggle />
           // <UseCallback />
-  <UseMemo />
-    )
+  //<UseMemo />
+  <UseCallback />
+)
 }
 
 export default App

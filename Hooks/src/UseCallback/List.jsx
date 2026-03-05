@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from "react";
 
-export const List = ({ getItems }) => {
-  const [items, setItems] = useState([]);
+import React from 'react'
 
-  useEffect(() => {
-    setItems(getItems);
-  }, [getItems]);
-
+export const List =React.memo(({name , addToCart }) => {
+ console.log(`${name} prod comp re-rendered`)
   return (
-    <div>
-      {items.map((item, index) => (
-        <p key={index}>{item}</p>
-      ))}
+    <div className='product'>
+      <h1>{name}</h1>
+      
+      <button onClick={addToCart}>AddtoCart</button>
     </div>
-  );
-};
+  )
+})
+
+

@@ -14,7 +14,7 @@ function reducerFn(state ,action){
 
 
 export const UseReducer = () => {
-  const [state,dispatch] = useReducer(reducerFn , {count:1});
+  const [state,dispatch] = useReducer(reducerFn , {count:0});
   
     //const [count, setCount] = useState(0)
 

@@ -1,4 +1,4 @@
-import React, { createContext } from 'react'
+
 
 import UseFetch from './useEffects/UseFetch'
 import Counter from './Counter'
@@ -13,8 +13,10 @@ import ThemeToggle from './Tasks/Themes'
 import UseMemo from './UseMemo/UseMemo'
 import Component from './UseContext/Component'
 import { UseReducer } from './UseReducer/UseReducer'
+
+import Router from './ReactRouter/Router'
  
-const Theme = createContext()
+
 
 function App() {
   return (
@@ -30,8 +32,9 @@ function App() {
  // <UseCallback />
  
  //<Component /> 
- <UseReducer />
-)
+ //<UseReducer />
+   <Router />
+  )
 }
 
 export default App

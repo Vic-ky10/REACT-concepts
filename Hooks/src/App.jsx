@@ -1,3 +1,4 @@
+import React, { createContext } from 'react'
 
 import UseFetch from './useEffects/UseFetch'
 import Counter from './Counter'
@@ -11,7 +12,9 @@ import UseCallback from './UseCallback/UseCallback'
 import ThemeToggle from './Tasks/Themes'
 import UseMemo from './UseMemo/UseMemo'
 import Component from './UseContext/Component'
+import { UseReducer } from './UseReducer/UseReducer'
  
+const Theme = createContext()
 
 function App() {
   return (
@@ -25,10 +28,9 @@ function App() {
           // <UseCallback />
   //<UseMemo />
  // <UseCallback />
-
-   <Component /> 
-
-
+ 
+ //<Component /> 
+ <UseReducer />
 )
 }
 

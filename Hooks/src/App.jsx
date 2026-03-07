@@ -15,6 +15,7 @@ import Component from './UseContext/Component'
 import { UseReducer } from './UseReducer/UseReducer'
 
 import Router from './ReactRouter/Router'
+import Redux from './REDUX/Redux'
  
 
 
@@ -33,7 +34,8 @@ function App() {
  
  //<Component /> 
  //<UseReducer />
-   <Router />
+  //  <Router />
+  < Redux />
   )
 }
 

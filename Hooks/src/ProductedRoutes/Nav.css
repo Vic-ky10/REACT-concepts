@@ -1,0 +1,14 @@
+
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(19, 177, 208);
+    padding: 20px;
+
+}
+
+li Link{
+ color: red;
+
+}
